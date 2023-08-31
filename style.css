@@ -1,0 +1,218 @@
+/* TODO jobba med responsivitet! */
+
+@import url('https://fonts.googleapis.com/css2?family=Coda&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap');
+
+:root{
+	--background-color:#262626;
+	--text-color-1:#dc75dc;
+	--text-color-2: #c5794d;
+	--text-color-3:#48aaba;
+}
+
+*{
+margin:0;
+padding:0;
+box-sizing: border-box;
+transition: 0.2s;
+}
+
+html{
+	background-color: var(--background-color);
+	scroll-behavior: smooth;
+}
+
+body{
+	height: 100vh;
+}
+
+main{
+	align-items: center;
+	padding: 5em 6em 0 6em;
+	margin: 0 auto;
+	width: 90%;
+	/* height: 100vh; */
+	
+	background-color: var(--background-color);
+}
+
+.body-footer{
+	display: flex;
+	align-items: center ;
+	justify-content: flex-end;
+	height: 4em;
+	border-top: 4px groove black;
+	position: sticky;
+	top: 100vh;
+	width: 100%;
+	color: white;
+}
+
+.body-footer > ul{
+	display: flex;
+	margin-right: 2em; 
+	list-style: none;
+}
+.body-footer  li{
+	padding: 0 1em;
+}
+
+.body-footer > ul:first-child{
+	display: flex;
+	align-items: center;
+}
+
+
+.fa-linkedin{
+	color: white;
+}
+
+
+
+/* Här börjar kod för landingpage-view */
+
+.main_section-landingpage-view{
+	display: flex;
+	flex-direction: column;
+}
+
+
+.main_div-headline-container{
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+	
+}
+
+
+.photo{
+	border-radius: 2em;
+	  box-shadow: 0em 0em 0.8em 0.04em;
+	  width: 25%;
+	  /* max-width: 100%; */
+	  height: auto;
+}
+
+/* TODO media-querys för h1 texten! */
+
+.main_div-h1-container{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 15em;
+	width: 30vw;
+	text-align: center;
+	margin:3em;
+ 	background-image:url(/images/arrow.png);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size:contain;
+	color:rgb(255, 255, 255);
+ 	background-color: var(--background-color)
+}
+
+h1{
+	font-size:1.8vw;
+	font-family: 'Coda', cursive;
+	padding:.5em;
+	width: 100%;
+}
+
+.main_article{
+	width:40%;
+	margin: 0 auto;
+	display: flex;
+	flex-direction: column;	
+}
+
+.main_article :nth-child(even){
+	align-self: flex-end;
+}
+
+.main_article > p {
+	max-width: 13em;
+	/* margin: 0 2em; */
+	font-family: 'Courier Prime', monospace;
+	color: var(--text-color-1)
+}
+
+.main_section_button-landingpage-view{
+	padding: 0.3em 0.5em;
+	margin-top: 3em;
+	font-family: 'Courier Prime', monospace;
+	font-size: 1.3em;
+	cursor:pointer;
+	margin:3em auto 4em  auto;
+	color: #48aaba;
+	background-color: var(--background-color);
+}
+
+	.main_section_button-landingpage-view:hover{
+		transform: scale(1.02);
+	}
+
+	/* Här börjar kod för about-view */
+
+.main_section-about-view{
+	display: none;
+	flex-direction: column;
+}
+
+.main_section_button-about-view{
+	width: fit-content;
+	height: fit-content;
+	margin-left: auto;
+	font-size: 1.5em;
+	cursor: pointer;
+	padding:.2em .2em 0 .2em;
+	background-color: var(--background-color);
+}
+
+.main_section_button-about-view:hover{
+	transform: scale(1.02);
+}
+
+.main-div_portrait-container{
+	display: flex;
+	align-items: flex-end;
+	justify-content: center;
+	max-width: 90%;
+	margin: 0 auto;
+}
+
+.main-div_portrait-container > ul{
+list-style: none;
+font-family: 'Courier Prime', monospace;
+font-size: 90%;
+line-height: 200%;
+padding-left: 1em;
+color: var(--text-color-1);
+}
+
+.main_section_article-landingpage-view{
+	font-family: 'Courier Prime', monospace;
+	margin: 4em auto;
+	max-width: 50%;
+	color:var(--text-color-2)
+}
+
+.main_section-_div-about-view-photolist{
+	display: flex;
+	align-items: center;
+	justify-content: space-evenly;
+	height: 4%;
+	width: 90%;
+	margin: 0 auto 4em 0;
+	
+}
+
+.photolist{
+	width: 10%;
+	height: auto;
+	
+}
+
+.photolist:hover{
+	transform: scale(1.9);
+}
